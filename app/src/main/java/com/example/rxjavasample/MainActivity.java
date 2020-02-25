@@ -46,13 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 )
                 .observeOn(AndroidSchedulers.mainThread()); // designate observer thread (main thread)
 
-
         taskObservable.subscribe(new Observer<Task>() {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.d(TAG, "onSubscribe: Invoked");
                 disposable.add(d);
-
 
             }
 
